@@ -1,0 +1,18 @@
+/* Enter your custom styles here */
+.headerTable{
+    /* display: flex; */
+    justify-content:end;
+}
+.headerStyle{
+    justify-content:end;
+}
+.button{
+    margin:0px 5px;
+}
+.profileButton:hover{
+    transform: scale(1.0) perspective(1px);
+    background-color: #000;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+

@@ -1,0 +1,135 @@
+{
+    "_version": "1.32.0",
+    "sap.app": {
+        "id": "ns.finalproject",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "dataSources": {
+           "books":{
+            "uri":"../ada598eb-4260-4da9-90e5-0646e19ced39.ns-finalproject.nsfinalproject/books/"
+           
+           }
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "ns-finalproject-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "info",
+                    "action": "display",
+                    "title": "{{flpTitle}}",
+                    "subTitle": "{{flpSubtitle}}",
+                    "icon": ""
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.99.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ns.finalproject.i18n.i18n"
+                }
+            }
+            
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "JS",
+                "async": true,
+                "viewPath": "ns.finalproject.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteView1",
+                    "pattern": "home",
+                    "target": [
+                        "TargetView1"
+                    ]
+                },
+                {
+                    "name": "RouteView2",
+                    "pattern": "profile",
+                    "target": [
+                        "TargetView2"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetView1": {
+                    "viewType": "JS",
+                    "level": 0,
+                    "viewName": "View1"
+                },
+                "TargetView2": {
+                    "level": 1,
+                    "viewName": "View2"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "ns.finalproject.view.View1",
+            "type": "JS",
+            "async": true,
+            "id": "View1"
+        }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "ns-finalproject"
+    }
+}
